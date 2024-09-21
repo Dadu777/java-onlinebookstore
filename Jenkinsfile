@@ -42,8 +42,8 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 script {
-                    def warFile = 'target/your-app.war'  // Path to the WAR file
-                    def tomcatManagerUrl = "${TOMCAT_URL}/manager/text/deploy?path=/bookstore&update=true"
+                    def warFile = 'target/onlinebookstore.war'  // Path to the WAR file
+                    def tomcatManagerUrl = "${TOMCAT_URL}/manager/text/deploy?path=/onlinebookstore&update=true"
                     
                     sh """
                     curl --upload-file ${warFile} \
